@@ -12,5 +12,35 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('transmilenio');
+});
+
+
+/*
+* CRUDS
+*/
+Route::resource('ruta','rutaController');
+Route::resource('troncal','troncalController');
+Route::resource('portal','portalController');
+
+/*
+* GENERADOR
+*/
+
+Route::get('generador', function () {
+    return view('generador');
+});
+
+/*
+* GENERADOR
+*/
+
+Route::get('carga', function () {
+    return view('cargardatos');
+});
+/*
+* WEB SERVICE
+*/
+Route::get('webservice', function () {
+    return view('webservice');
 });
