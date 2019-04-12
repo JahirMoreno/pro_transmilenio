@@ -8,8 +8,8 @@
 
 			<div class="col-lg-3">
 				<div class="text-center">
-				<h1 class="my-4">WEB SERVICE</h1>
-				<img src="imagenes/json.svg" height="50" width="50">
+					<h1 class="my-4">WEB SERVICE</h1>
+					<img src="imagenes/json.svg" height="50" width="50">
 				</div>
 				<br>
 				<div class="list-group">
@@ -38,7 +38,18 @@
 										<th>Tipo Servicio</th>
 									</thead>
 									<tbody>
-
+										<?php
+										$url = "https://my-json-server.typicode.com/jahirmoreno/ws-transmilenio/rutas";
+										$json = file_get_contents($url);
+										$rutas = json_decode($json, true);
+										foreach($rutas as $ruta)
+											echo "<tr>
+										<td>{$ruta['nombre']}</td>
+										<td>{$ruta['estado']}</td>
+										<td>{$ruta['longitud']}</td>
+										<td>{$ruta['tipo_servicio']}</td>
+										</tr>";
+										?>
 									</tbody>
 
 								</table>

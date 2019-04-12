@@ -35,7 +35,15 @@
 										<th>Nombre</th>
 									</thead>
 									<tbody>
-
+										<?php
+										$url = "https://my-json-server.typicode.com/jahirmoreno/ws-transmilenio/portales";
+										$json = file_get_contents($url);
+										$portales = json_decode($json, true);
+										foreach($portales as $portal)
+											echo "<tr>
+										<td>{$portal['nombre']}</td>
+										</tr>";
+										?>
 									</tbody>
 
 								</table>
