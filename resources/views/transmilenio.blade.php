@@ -10,7 +10,7 @@
 			<a href="{{url('troncal')}}" class="list-group-item active">CRUD</a>
 			<a href="{{url('generador')}}" class="list-group-item">Generar Datos</a>
 			<a href="{{url('carga')}}" class="list-group-item active">Cargar Datos</a>
-			<a href="{{url('webservice')}}" class="list-group-item">Web Service</a>
+			<a href="{{url('wsportal')}}" class="list-group-item">Web Service</a>
 			<a href="{{url('estacion')}}" class="list-group-item active">Reportes</a>
 		</div>
 		<h5>Copyright &copy; Lizzeth Amortegui - Jahir Moreno</h5>

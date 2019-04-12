@@ -24,7 +24,7 @@ Route::resource('troncal','troncalController');
 Route::resource('portal','portalController');
 
 /*
-* GENERADOR
+* GENERADOR DE DATOS
 */
 
 Route::get('generador', function () {
@@ -32,7 +32,7 @@ Route::get('generador', function () {
 });
 
 /*
-* GENERADOR
+* CARGA DE DATOS
 */
 
 Route::get('carga', function () {
@@ -41,6 +41,13 @@ Route::get('carga', function () {
 /*
 * WEB SERVICE
 */
-Route::get('webservice', function () {
-    return view('webservice');
+
+Route::get('wsportal', function () {
+    return view('webservice/wsportal');
+});
+Route::get('wsruta', function () {
+    return view('webservice/wsruta');
+});
+Route::get('wstroncal', function () {
+    return view('webservice/wstroncal');
 });

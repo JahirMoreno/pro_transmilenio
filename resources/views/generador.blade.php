@@ -5,7 +5,7 @@
 		<div class="col-sm-4 col-sm-offset-4">
 			<h1 class="my-4">Generación de Datos</h1>
 			<br>
-			<img src="imagenes/carga.svg" height="100" width="100">
+			<img src="imagenes/descarga.svg" height="100" width="100">
 			<br><br><br>
 		</div>
 	</div>
