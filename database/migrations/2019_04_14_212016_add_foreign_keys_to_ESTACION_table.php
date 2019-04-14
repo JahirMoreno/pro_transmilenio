@@ -14,8 +14,8 @@ class AddForeignKeysToESTACIONTable extends Migration {
 	{
 		Schema::table('ESTACION', function(Blueprint $table)
 		{
-			$table->foreign('id_portal', 'EST_FK_IDP')->references('id')->on('PORTAL')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('id_troncal', 'EST_FK_IDT')->references('id')->on('TRONCAL')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('id_portal', 'EST_FK_IDP')->references('id')->on('PORTAL')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('id_troncal', 'EST_FK_IDT')->references('id')->on('TRONCAL')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

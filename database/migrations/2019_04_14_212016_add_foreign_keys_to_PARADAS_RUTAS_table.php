@@ -14,8 +14,8 @@ class AddForeignKeysToPARADASRUTASTable extends Migration {
 	{
 		Schema::table('PARADAS_RUTAS', function(Blueprint $table)
 		{
-			$table->foreign('id_ruta', 'PAR_FK_IDR')->references('id')->on('RUTA')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('id_vagon', 'PAR_FK_IDV')->references('id')->on('VAGON')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('id_ruta', 'PAR_FK_IDR')->references('id')->on('RUTA')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('id_vagon', 'PAR_FK_IDV')->references('id')->on('VAGON')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

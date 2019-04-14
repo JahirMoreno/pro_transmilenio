@@ -14,7 +14,7 @@ class AddForeignKeysToVAGONTable extends Migration {
 	{
 		Schema::table('VAGON', function(Blueprint $table)
 		{
-			$table->foreign('id_estacion', 'VAG_FK_IDE')->references('id')->on('ESTACION')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('id_estacion', 'VAG_FK_IDE')->references('id')->on('ESTACION')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

@@ -18,10 +18,11 @@
 					</div>
 					<div class="panel-body">
 						<div class="table-container">
-							<form method="POST" action="" role="form">
+							<form method="POST" action="{{route('generarTroncales')}}" role="form">
+								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-3">
-										<input type="number" name="" id="" class="form-control input-sm" placeholder="Cantidad" required="true">
+										<input type="number" name="cantidadTroncales" id="cantidadTroncales" class="form-control input-sm" placeholder="Cantidad" required="true">
 									</div>
 								</div>
 								<br>
@@ -42,10 +43,11 @@
 					</div>
 					<div class="panel-body">
 						<div class="table-container">
-							<form method="POST" action="" role="form">
+							<form method="POST" action="{{route('generarRutas')}}" role="form">
+								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-3">
-										<input type="number" name="" id="" class="form-control input-sm" placeholder="Cantidad" required="true">
+										<input type="number" name="cantidadRutas" id="cantidadRutas" class="form-control input-sm" placeholder="Cantidad" required="true">
 									</div>
 								</div>
 								<br>
@@ -66,10 +68,11 @@
 					</div>
 					<div class="panel-body">
 						<div class="table-container">
-							<form method="POST" action="" role="form">
+							<form method="POST" action="{{route('generarPortales')}}" role="form">
+								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-3">
-										<input type="number" name="" id="" class="form-control input-sm" placeholder="Cantidad" required="true">
+										<input type="number" name="cantidadPortales" id="cantidadPortales" class="form-control input-sm" placeholder="Cantidad" required="true">
 									</div>
 								</div>
 								<br>

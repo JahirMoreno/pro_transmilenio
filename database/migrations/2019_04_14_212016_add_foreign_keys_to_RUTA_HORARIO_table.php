@@ -14,8 +14,8 @@ class AddForeignKeysToRUTAHORARIOTable extends Migration {
 	{
 		Schema::table('RUTA_HORARIO', function(Blueprint $table)
 		{
-			$table->foreign('id_horario', 'RUH_FK_IDH')->references('id')->on('HORARIO')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('id_ruta', 'RUH_FK_IDR')->references('id')->on('RUTA')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('id_horario', 'RUH_FK_IDH')->references('id')->on('HORARIO')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('id_ruta', 'RUH_FK_IDR')->references('id')->on('RUTA')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

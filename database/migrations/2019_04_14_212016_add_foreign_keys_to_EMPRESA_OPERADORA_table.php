@@ -14,7 +14,7 @@ class AddForeignKeysToEMPRESAOPERADORATable extends Migration {
 	{
 		Schema::table('EMPRESA_OPERADORA', function(Blueprint $table)
 		{
-			$table->foreign('id_estacion', 'EMP_FK_IDE')->references('id')->on('ESTACION')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('id_estacion', 'EMP_FK_IDE')->references('id')->on('ESTACION')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

@@ -38,6 +38,10 @@ Route::get('generador', function () {
 Route::get('carga', function () {
     return view('cargardatos');
 });
+
+Route::post('/genTroncales', 'generadorController@generarTroncales')->name('generarTroncales');
+Route::post('/genRutas', 'generadorController@generarRutas')->name('generarRutas');
+Route::post('/genPortales', 'generadorController@generarPortales')->name('generarPortales');
 /*
 * WEB SERVICE
 */

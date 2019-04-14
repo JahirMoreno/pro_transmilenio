@@ -14,7 +14,7 @@ class AddForeignKeysToPLATAFORMATable extends Migration {
 	{
 		Schema::table('PLATAFORMA', function(Blueprint $table)
 		{
-			$table->foreign('id_portal', 'PLA_FK_IDP')->references('id')->on('PORTAL')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('id_portal', 'PLA_FK_IDP')->references('id')->on('PORTAL')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 
