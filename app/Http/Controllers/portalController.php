@@ -38,7 +38,7 @@ class portalController extends Controller
     {
         $this->validate($request,[ 'nombre'=>'required']);
         portal::create($request->all());
-        return redirect()->route('portal.index')->with('success','Registro creado satisfactoriamente');
+        return redirect()->route('portal.index')->with('success','Registro creado correctamente.');
     }
 
     /**
@@ -76,7 +76,7 @@ class portalController extends Controller
     {
         $this->validate($request,[ 'nombre'=>'required']);
         portal::find($id)->update($request->all());
-        return redirect()->route('portal.index')->with('updated','Registro actualizado satisfactoriamente');
+        return redirect()->route('portal.index')->with('updated','Registro actualizado correctamente.');
     }
 
     /**
@@ -88,7 +88,7 @@ class portalController extends Controller
     public function destroy($id)
     {
         portal::find($id)->delete();
-        return redirect()->route('portal.index')->with('deleted','Registro eliminado satisfactoriamente');
+        return redirect()->route('portal.index')->with('deleted','Registro eliminado correctamente.');
     }
 }
 

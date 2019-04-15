@@ -38,7 +38,7 @@ class rutaController extends Controller
     {
         $this->validate($request,['nombre'=>'required', 'estado'=>'required', 'longitud'=>'required', 'tipo_servicio'=>'required']);
         ruta::create($request->all());
-        return redirect()->route('ruta.index')->with('success','Registro creado satisfactoriamente');
+        return redirect()->route('ruta.index')->with('success','Registro creado correctamente.');
     }
 
     /**
@@ -76,7 +76,7 @@ class rutaController extends Controller
     {
         $this->validate($request,['nombre'=>'required', 'estado'=>'required', 'longitud'=>'required', 'tipo_servicio'=>'required']);
         ruta::find($id)->update($request->all());
-        return redirect()->route('ruta.index')->with('updated','Registro actualizado satisfactoriamente');
+        return redirect()->route('ruta.index')->with('updated','Registro actualizado correctamente.');
     }
 
     /**
@@ -88,6 +88,6 @@ class rutaController extends Controller
     public function destroy($id)
     {
         ruta::find($id)->delete();
-        return redirect()->route('ruta.index')->with('deleted','Registro eliminado satisfactoriamente');
+        return redirect()->route('ruta.index')->with('deleted','Registro eliminado correctamente.');
     }
 }

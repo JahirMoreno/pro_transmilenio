@@ -15,7 +15,7 @@
 				</div>
 				@endif
 				@if(Session::has('success'))
-				<div class="alert alert-info">
+				<div class="alert alert-info aviso">
 					{{Session::get('success')}}
 				</div>
 				@endif

@@ -10,6 +10,11 @@
 		</div>
 	</div>
 	<div class="container">
+		@if(Session::has('success'))
+		<div class="alert alert-success aviso">
+			{{Session::get('success')}}
+		</div>
+		@endif
 		<div class="row">
 			<div class="col-md-4">
 				<div class="panel panel-default">
@@ -18,10 +23,11 @@
 					</div>
 					<div class="panel-body">
 						<div class="table-container">
-							<form method="POST" action="" role="form">
+							<form method="POST" action="{{route('cargarTroncales')}}" enctype="multipart/form-data">
+								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-1">
-										<input type="file" name="troncal" required="true">
+										<input type="file" name="archivoTroncales" id="archivoTroncales" required="true">
 									</div>
 								</div>
 								<br>
@@ -42,10 +48,11 @@
 					</div>
 					<div class="panel-body">
 						<div class="table-container">
-							<form method="POST" action="" role="form">
+							<form method="POST" action="{{route('cargarRutas')}}" enctype="multipart/form-data">
+								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-1">
-										<input type="file" name="troncal" required="true">
+										<input type="file" name="archivoRutas" id="archivoRutas" required="true">
 									</div>
 								</div>
 								<br>
@@ -66,10 +73,11 @@
 					</div>
 					<div class="panel-body">
 						<div class="table-container">
-							<form method="POST" action="" role="form">
+							<form method="POST" action="{{route('cargarPortales')}}" enctype="multipart/form-data">
+								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-1">
-										<input type="file" name="troncal" required="true">
+										<input type="file" name="archivoPortales" id="archivoPortales" required="true">
 									</div>
 								</div>
 								<br>

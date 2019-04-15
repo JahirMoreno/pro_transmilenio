@@ -26,17 +26,17 @@
 				<div class="col-ld-1">
 					<div class="panel panel-default">
 						@if(Session::has('success'))
-						<div class="alert alert-success">
+						<div class="alert alert-success aviso">
 							{{Session::get('success')}}
 						</div>
 						@endif
 						@if(Session::has('updated'))
-						<div class="alert alert-success">
+						<div class="alert alert-success aviso">
 							{{Session::get('updated')}}
 						</div>
 						@endif
 						@if(Session::has('deleted'))
-						<div class="alert alert-danger">
+						<div class="alert alert-danger aviso">
 							{{Session::get('deleted')}}
 						</div>
 						@endif

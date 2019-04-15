@@ -38,7 +38,7 @@ class troncalController extends Controller
     {
         $this->validate($request,[ 'nombre'=>'required', 'tipo_servicio'=>'required', 'origen'=>'required', 'destino'=>'required']);
         troncal::create($request->all());
-        return redirect()->route('troncal.index')->with('success','Registro creado satisfactoriamente');
+        return redirect()->route('troncal.index')->with('success','Registro creado correctamente.');
     }
 
     /**
@@ -76,7 +76,7 @@ class troncalController extends Controller
     {
         $this->validate($request,[ 'nombre'=>'required', 'tipo_servicio'=>'required', 'origen'=>'required', 'destino'=>'required']);
         troncal::find($id)->update($request->all());
-        return redirect()->route('troncal.index')->with('updated','Registro actualizado satisfactoriamente');
+        return redirect()->route('troncal.index')->with('updated','Registro actualizado correctamente.');
     }
 
     /**
@@ -88,7 +88,7 @@ class troncalController extends Controller
     public function destroy($id)
     {
         troncal::find($id)->delete();
-        return redirect()->route('troncal.index')->with('deleted','Registro eliminado satisfactoriamente');
+        return redirect()->route('troncal.index')->with('deleted','Registro eliminado correctamente.');
     }
 }
 
