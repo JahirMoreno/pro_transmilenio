@@ -22,7 +22,7 @@
 								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-3">
-										<input type="number" name="cantidadTroncales" id="cantidadTroncales" class="form-control input-sm" placeholder="Cantidad" required="true">
+										<input type="number" name="cantidadTroncales" id="cantidadTroncales" class="form-control input-sm" placeholder="Cantidad" required="true" min="1" max="50000">
 									</div>
 								</div>
 								<br>
@@ -47,7 +47,7 @@
 								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-3">
-										<input type="number" name="cantidadRutas" id="cantidadRutas" class="form-control input-sm" placeholder="Cantidad" required="true">
+										<input type="number" name="cantidadRutas" id="cantidadRutas" class="form-control input-sm" placeholder="Cantidad" required="true" min="1" max="50000">
 									</div>
 								</div>
 								<br>
@@ -72,7 +72,7 @@
 								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-3">
-										<input type="number" name="cantidadPortales" id="cantidadPortales" class="form-control input-sm" placeholder="Cantidad" required="true">
+										<input type="number" name="cantidadPortales" id="cantidadPortales" class="form-control input-sm" placeholder="Cantidad" required="true" min="1" max="50000">
 									</div>
 								</div>
 								<br>
