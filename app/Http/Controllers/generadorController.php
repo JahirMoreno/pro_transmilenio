@@ -17,8 +17,8 @@ class generadorController extends Controller
     			while ($contador <= $cantidad+1) {
     				$nombre = "TRONCAL ".($contador-1);
     				$t_servicio = $tipo_servicio[mt_rand(0,2)];
-    				$origen = "ORIGEN ".($contador-1);
-    				$destino = "DESTINO ".($contador-1);
+    				$origen = "ORIGEN ".mt_rand(1,200);
+    				$destino = "DESTINO ".mt_rand(1,200);
     				$sheet->row($contador, [$nombre, $t_servicio, $origen, $destino]);
     				$contador++;
     			}
@@ -55,7 +55,7 @@ class generadorController extends Controller
     			$sheet->row(1, ['nombre']);
     			$portal = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
     			while ($contador <= $cantidad+1) {
-    				$nombre = "PORTAL ".$portal[mt_rand(0,11)].($contador-1);
+    				$nombre = "PORTAL ".$portal[mt_rand(0,11)].$portal[mt_rand(0,11)].$portal[mt_rand(0,11)]." DE LA ".mt_rand(10,180);
     				$sheet->row($contador, [$nombre]);
     				$contador++;
     			}
