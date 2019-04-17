@@ -49,6 +49,7 @@
 										<div class="row">
 											<div class="col-xs-12 col-sm-12 col-md-12">
 												<div class="form-group">
+													<label for="nombre">Nombre:</label>
 													<input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre" value="{{$portal->nombre}}">
 												</div>
 											</div>

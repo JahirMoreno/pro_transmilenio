@@ -49,11 +49,13 @@
 										<div class="row">
 											<div class="col-xs-6 col-sm-6 col-md-6">
 												<div class="form-group">
+													<label for="nombre">Nombre:</label>
 													<input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre" value="{{$ruta->nombre}}">
 												</div>
 											</div>
 											<div class="col-xs-6 col-sm-6 col-md-6">
 												<div class="form-group">
+													<label for="estado">Estado:</label>
 													<input type="text" name="estado" id="estado" class="form-control input-sm" placeholder="Estado" value="{{$ruta->estado}}">
 												</div>
 											</div>
@@ -61,11 +63,13 @@
 										<div class="row">
 											<div class="col-xs-6 col-sm-6 col-md-6">
 												<div class="form-group">
+													<label for="longitud">Longitud:</label>
 													<input type="number" name="longitud" id="longitud" class="form-control input-sm" placeholder="Longitud" value="{{$ruta->longitud}}">
 												</div>
 											</div>
 											<div class="col-xs-6 col-sm-6 col-md-6">
 												<div class="form-group">
+													<label for="tipo_servicio">Tipo Servicio:</label>
 													<input type="text" name="tipo_servicio" id="tipo_servicio" class="form-control input-sm" placeholder="Tipo Servicio" value="{{$ruta->tipo_servicio}}">
 												</div>
 											</div>

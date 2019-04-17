@@ -49,11 +49,13 @@
 										<div class="row">
 											<div class="col-xs-6 col-sm-6 col-md-6">
 												<div class="form-group">
+													<label for="nombre">Nombre:</label>
 													<input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre" value="{{$troncal->nombre}}">
 												</div>
 											</div>
 											<div class="col-xs-6 col-sm-6 col-md-6">
 												<div class="form-group">
+													<label for="tipo_servicio">Tipo Servicio:</label>
 													<input type="text" name="tipo_servicio" id="tipo_servicio" class="form-control input-sm" placeholder="Tipo Servicio" value="{{$troncal->tipo_servicio}}">
 												</div>
 											</div>
@@ -61,11 +63,13 @@
 										<div class="row">
 											<div class="col-xs-6 col-sm-6 col-md-6">
 												<div class="form-group">
+													<label for="origen">Origen:</label>
 													<input type="text" name="origen" id="origen" class="form-control input-sm" placeholder="Origen" value="{{$troncal->origen}}">
 												</div>
 											</div>
 											<div class="col-xs-6 col-sm-6 col-md-6">
 												<div class="form-group">
+													<label for="destino">Destino:</label>
 													<input type="text" name="destino" id="destino" class="form-control input-sm" placeholder="Destino" value="{{$troncal->destino}}">
 												</div>
 											</div>
