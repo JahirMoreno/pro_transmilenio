@@ -17,6 +17,9 @@
 			height: 400,
 			width: 800,
 			colors: ['orange'],
+			bar: {
+				groupWidth: 45
+			}
 		};
 		var chart =new google.visualization.ColumnChart(
 			document.getElementById('troncalesEstacion'));
