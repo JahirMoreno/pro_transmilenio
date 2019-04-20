@@ -11,7 +11,7 @@
 			<a href="{{url('generador')}}" class="list-group-item">Generar Datos</a>
 			<a href="{{url('carga')}}" class="list-group-item active">Cargar Datos</a>
 			<a href="{{url('wstroncal')}}" class="list-group-item">Web Service</a>
-			<a href="{{url('estacion')}}" class="list-group-item active">Reportes</a>
+			<a href="{{url('reportes')}}" class="list-group-item active">Reportes</a>
 		</div>
 		<h5>Copyright &copy; Lizzeth Amortegui - Jahir Moreno</h5>
 	</div>

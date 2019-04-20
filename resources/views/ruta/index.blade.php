@@ -65,7 +65,7 @@
 											<td>{{$ruta->tipo_servicio}}</td>
 											<td><a class="btn btn-primary btn-xs" href="{{action('rutaController@edit', $ruta->id)}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
 											<td>
-												<form action="{{action('rutaController@destroy', $ruta->id)}}" method="post">
+												<form action="{{action('rutaController@destroy', $ruta->id)}}" method="post" onclick="return confirm ('¿Está seguro que desea eliminar el registro? Recuerde que se hará una eliminación en cascada de los registros asociados.')">
 													{{csrf_field()}}
 													<input name="_method" type="hidden" value="DELETE">
 													<button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-trash"></span></button>

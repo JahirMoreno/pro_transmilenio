@@ -31,9 +31,9 @@ Route::get('generador', function () {
     return view('generador');
 });
 
-Route::post('/genTroncales', 'generadorController@generarTroncales')->name('generarTroncales');
-Route::post('/genRutas', 'generadorController@generarRutas')->name('generarRutas');
-Route::post('/genPortales', 'generadorController@generarPortales')->name('generarPortales');
+Route::post('genTroncales', 'generadorController@generarTroncales')->name('generarTroncales');
+Route::post('genRutas', 'generadorController@generarRutas')->name('generarRutas');
+Route::post('genPortales', 'generadorController@generarPortales')->name('generarPortales');
 
 /*
 * CARGA DE DATOS
@@ -43,9 +43,10 @@ Route::get('carga', function () {
     return view('cargardatos');
 });
 
-Route::post('/loadTroncales', 'cargardatosController@cargarTroncales')->name('cargarTroncales');
-Route::post('/loadRutas', 'cargardatosController@cargarRutas')->name('cargarRutas');
-Route::post('/loadPortales', 'cargardatosController@cargarPortales')->name('cargarPortales');
+Route::post('loadTroncales', 'cargardatosController@cargarTroncales')->name('cargarTroncales');
+Route::post('loadRutas', 'cargardatosController@cargarRutas')->name('cargarRutas');
+Route::post('loadPortales', 'cargardatosController@cargarPortales')->name('cargarPortales');
+
 /*
 * WEB SERVICE
 */
@@ -59,3 +60,10 @@ Route::get('wsruta', function () {
 Route::get('wstroncal', function () {
     return view('webservice/wstroncal');
 });
+
+/*
+* REPORTES
+*/
+
+Route::get('reportes', 'reportesController@estacionTroncal');
+
