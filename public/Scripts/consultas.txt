@@ -1,0 +1,34 @@
+select h.hora_inicio, count(h.id) from ruta r inner join ruta_horario rh on r.id = rh.id_ruta
+inner join horario h on h.id = rh.id_horario group by h.hora_inicio;
+
+select r.id_ruta,r.nombre_ruta,hr.fecha_horario,hr.hora_inicio_horario,hr.hora_fin_horario
+from ruta r, horario_ruta hr,cumple_horario ch
+where hr.id_horario=ch.id_horario and r.id_ruta=ch.id_ruta;
+
+select r.nombre_ruta,tb.id_tipo_bus,tb.nombre_tipo_bus
+from tipo_bus tb,ruta r,ruta_asignada_bus rb
+where r.id_ruta=rb.id_ruta and tb.id_tipo_bus=rb.id_tipo_bus;
+
+select e.id_estacion,e.nombre_estacion,p.nombre_portal
+from estacion e, portal p
+where p.id_portal=e.id_portal;
+
+select * id_ruta
+from ruta
+where id_ruta like '04';
+
+
+select nombre_estación
+from estacion
+where id_estacion =< 02;
+
+select v.nombre_vagon, p.nombre_plataforma
+from plataforma p
+inner join portal p
+on p.id_portal = v.id_portal
+order by id_portal;
+
+
+select nombre_bus, capacidad_tipo_bus
+from tipo_bus
+where id_estacion =< 02;

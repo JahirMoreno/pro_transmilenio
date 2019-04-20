@@ -1,0 +1,38 @@
+1. Instalacion de la librería para crear archivos de migración de la base de datos a laravel.
+
+composer require --dev "xethron/migrations-generator"
+
+2. Vamos a .env para modificar la conexión a la base de datos:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=transmilenio
+DB_USERNAME=root
+DB_PASSWORD=
+
+3. Para generar los archivos usamos:
+
+php artisan migrate:generate
+
+4. Para crear la base de datos:
+
+Se elimina la base de datos de mysql, se crea la base de datos con nombre "transmilenio".
+Consola: php artisan migrate
+
+5. Creamos el modelo para la tabla estaciones.
+
+php artisan make:model estacion
+
+6. Creamos el controlador para estacion.
+
+php artisan make:estacionController --resource
+
+7. Instalación de faker para la generacion de datos
+
+composer require fzaninotto/faker
+
+8. Instalación de la librería de excel para reportes y generación de archivo plano
+
+composer require maatwebsite/excel
+
