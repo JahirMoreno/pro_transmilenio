@@ -48,14 +48,16 @@ class reportesController extends Controller
 	{
 		$horario = DB::table('ruta')
 				->select(
-					DB::raw('ruta.estado as nestado'),
-					DB::raw('count(ruta.estado) as cantidad'))
-				->groupBy(DB::raw('ruta.estado'))
+					DB::raw('horario.hora_inicio as hinicio'),
+					DB::raw('count(horario.id) as cantidad'))
+				->join('ruta_horario', 'ruta_horario.id_ruta', '=', 'ruta.id')
+				->join('horario', 'horario.id', '=', 'ruta_horario.id_horario')
+				->groupBy(DB::raw('horario.hora_inicio'))
 				->get();
 		$array[] = ['Nombre', 'Cantidad'];
 
 		foreach ($horario as $key => $value) {
-			$array[++$key] = [$value->nestado, (int)$value->cantidad];
+			$array[++$key] = [$value->hinicio, (int)$value->cantidad];
 		}
 		return view ('reporteshorarios')->with('horario', json_encode($array));
 	}

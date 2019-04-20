@@ -16,8 +16,12 @@
 		var options = {
 			height: 400,
 			width: 800,
+			curveType: 'function',
+			series: {
+            0: { color: '#e2431e' },
+        }
 		};
-		var chart =new google.visualization.PieChart(
+		var chart =new google.visualization.LineChart(
 			document.getElementById('rutaHorario'));
 		chart.draw(data, options);
 	}

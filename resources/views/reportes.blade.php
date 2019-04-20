@@ -16,6 +16,9 @@
 		var options = {
 			height: 400,
 			width: 800,
+			series: {
+            0: { color: '#e7711b' },
+          }
 		};
 		var chart =new google.visualization.ColumnChart(
 			document.getElementById('troncalesEstacion'));
