@@ -31,11 +31,13 @@
 					<h1 class="my-4">REPORTES</h1>
 					<img src="imagenes/reportes.svg" height="70" width="70">
 					<br> <br>
-					<div class="list-group">
-						<a href="{{url('reportes')}}" class="list-group-item">Troncales</a>
-						<a href="{{url('reportesrutas')}}" class="list-group-item active">Rutas</a>
-						<a href="{{url('reporteshorarios')}}" class="list-group-item">Horarios</a>
-					</div>
+				</div>
+				<div class="list-group">
+					<a href="{{url('reportes')}}" class="list-group-item">Troncales</a>
+					<a href="{{url('reportesrutas')}}" class="list-group-item active">Rutas</a>
+					<a href="{{url('reporteshorarios')}}" class="list-group-item">Horarios</a>
+				</div>
+				<div class="text-center">
 					<a href="{{url('/')}}" class="btn btn-default">Regresar</a>
 				</div>
 			</div>
