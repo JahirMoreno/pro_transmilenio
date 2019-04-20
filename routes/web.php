@@ -66,4 +66,6 @@ Route::get('wstroncal', function () {
 */
 
 Route::get('reportes', 'reportesController@estacionTroncal');
+Route::get('reportesrutas', 'reportesController@rutaEstado');
+Route::get('reporteshorarios', 'reportesController@rutaHorario');
 

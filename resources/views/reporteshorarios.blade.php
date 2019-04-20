@@ -5,7 +5,7 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script type="text/javascript">
-	var analytics = <?php echo $troncal; ?>;
+	var analytics = <?php echo $horario; ?>;
 	google.charts.load('current', {'packages': ['corechart']}
 		);
 	google.charts.setOnLoadCallback(drawChart);
@@ -17,8 +17,8 @@
 			height: 400,
 			width: 800,
 		};
-		var chart =new google.visualization.ColumnChart(
-			document.getElementById('troncalesEstacion'));
+		var chart =new google.visualization.PieChart(
+			document.getElementById('rutaHorario'));
 		chart.draw(data, options);
 	}
 </script>
@@ -32,9 +32,9 @@
 					<img src="imagenes/reportes.svg" height="70" width="70">
 					<br> <br>
 					<div class="list-group">
-						<a href="{{url('reportes')}}" class="list-group-item active">Troncales</a>
+						<a href="{{url('reportes')}}" class="list-group-item">Troncales</a>
 						<a href="{{url('reportesrutas')}}" class="list-group-item">Rutas</a>
-						<a href="{{url('reporteshorarios')}}" class="list-group-item">Horarios</a>
+						<a href="{{url('reporteshorarios')}}" class="list-group-item active">Horarios</a>
 					</div>
 					<a href="{{url('/')}}" class="btn btn-default">Regresar</a>
 				</div>
@@ -45,12 +45,12 @@
 				<br>
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title">Número de estaciones por troncal: </h3>
+						<h3 class="panel-title">Cantidad de rutas por horario de salida:  </h3>
 					</div>
 					<div class="panel-body">
 						<div class="table-container">
 							<div class="row" >
-								<div id="troncalesEstacion"></div>
+								<div id="rutaHorario"></div>
 							</div>
 						</div>
 					</div>
