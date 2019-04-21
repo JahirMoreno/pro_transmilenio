@@ -88,6 +88,6 @@ class rutaController extends Controller
     public function destroy($id)
     {
         ruta::find($id)->delete();
-        return redirect()->route('ruta.index')->with('deleted','Registro eliminado correctamente.');
+        return redirect()->route('ruta.index')->with('success','Registro eliminado correctamente.');
     }
 }

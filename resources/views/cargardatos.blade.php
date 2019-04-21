@@ -27,7 +27,7 @@
 								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-1">
-										<input type="file" name="archivoTroncales" id="archivoTroncales" required="true">
+										<input type="file" name="archivoTroncales" id="archivoTroncales" required="true" accept=".csv">
 									</div>
 								</div>
 								<br>
@@ -52,7 +52,7 @@
 								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-1">
-										<input type="file" name="archivoRutas" id="archivoRutas" required="true">
+										<input type="file" name="archivoRutas" id="archivoRutas" required="true" accept=".csv">
 									</div>
 								</div>
 								<br>
@@ -77,7 +77,7 @@
 								@csrf
 								<div class="row">
 									<div class="col-xs-6 col-xs-offset-1">
-										<input type="file" name="archivoPortales" id="archivoPortales" required="true">
+										<input type="file" name="archivoPortales" id="archivoPortales" required="true" accept=".csv">
 									</div>
 								</div>
 								<br>

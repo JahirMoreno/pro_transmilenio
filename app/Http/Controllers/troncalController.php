@@ -88,7 +88,7 @@ class troncalController extends Controller
     public function destroy($id)
     {
         troncal::find($id)->delete();
-        return redirect()->route('troncal.index')->with('deleted','Registro eliminado correctamente.');
+        return redirect()->route('troncal.index')->with('success','Registro eliminado correctamente.');
     }
 }
 

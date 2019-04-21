@@ -88,7 +88,7 @@ class portalController extends Controller
     public function destroy($id)
     {
         portal::find($id)->delete();
-        return redirect()->route('portal.index')->with('deleted','Registro eliminado correctamente.');
+        return redirect()->route('portal.index')->with('success','Registro eliminado correctamente.');
     }
 }
 
